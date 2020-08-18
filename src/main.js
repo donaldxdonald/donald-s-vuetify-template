@@ -7,6 +7,12 @@ import '@babel/polyfill'
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
 import '@/styles/base.scss'
+import Message from '@/utils/message'
+import request from '@/utils/request'
+
+Vue.prototype.$request = request
+Vue.prototype.$message = Message
+Vue.prototype.$log = window.console.log
 
 Vue.config.productionTip = false
 

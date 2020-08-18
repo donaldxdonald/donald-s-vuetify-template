@@ -23,6 +23,15 @@
             target="_blank"
           >Discord Community</a>
         </p>
+        <v-btn
+          color="error"
+          @click.native="test"
+        >
+          test
+          <v-icon large>
+            mdi-home
+          </v-icon>
+        </v-btn>
       </v-col>
 
       <v-col
@@ -147,6 +156,18 @@ export default {
         href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions'
       }
     ]
-  })
+  }),
+  methods: {
+    test () {
+      // this.$request.get('hh')
+      this.$message({
+        message: '1999999'
+      })
+      // this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+      console.log(this.$vuetify)
+      // console.log(this)
+      // this.open = true
+    }
+  }
 }
 </script>
